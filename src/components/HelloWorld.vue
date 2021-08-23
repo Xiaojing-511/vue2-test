@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-08-11 18:43:57
+ * @LastEditTime: 2021-08-20 15:36:55
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /vue2-test/src/components/HelloWorld.vue
+-->
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
@@ -27,6 +35,7 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <button v-on="$listeners">cscvsfvvds</button>
   </div>
 </template>
 
@@ -35,7 +44,10 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+  created(){
+    console.log('$attrs', this.$attrs, this.$listeners);
+  },
 }
 </script>
 
