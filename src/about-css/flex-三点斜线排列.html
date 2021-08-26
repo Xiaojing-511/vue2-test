@@ -1,0 +1,45 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-08-26 15:20:29
+ * @LastEditTime: 2021-08-26 15:46:15
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /vue2-test/src/about-css/flex-三点斜线排列.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: space-between;
+        }
+        .point{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #000;
+        }
+        .point2{
+            align-self: center;
+        }
+        .point3{
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="point point1"></div>
+        <div class="point point2"></div>
+        <div class="point point3"></div>
+    </div>
+</body>
+</html>
