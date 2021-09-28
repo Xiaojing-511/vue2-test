@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-08-24 17:09:57
- * @LastEditTime: 2021-09-15 14:33:48
+ * @LastEditTime: 2021-09-24 11:07:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue2-test/src/components/Test.vue
@@ -26,7 +26,7 @@
 // import '../js/new'
 // import '../js/promise'
 // import '../js/throttle'
-// import '../js/继承'
+import '../js/继承'
 import '../arithmetic/js对象数组变为树形结构'
 export default {
     created(){
