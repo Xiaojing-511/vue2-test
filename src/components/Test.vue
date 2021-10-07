@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-08-24 17:09:57
- * @LastEditTime: 2021-09-24 11:07:03
+ * @LastEditTime: 2021-10-07 16:13:34
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue2-test/src/components/Test.vue
@@ -18,6 +18,7 @@
         </ul>
         <p>cecvsf</p>
         <canvas id="myCanvas" width="300px" height="300px"></canvas>
+        <button @click="change">change value</button>
     </div>
 </template>
 <script>
@@ -29,6 +30,24 @@
 import '../js/继承'
 import '../arithmetic/js对象数组变为树形结构'
 export default {
+    data() {
+        return {
+            testWatchObj: {
+                name: 'lisi'
+            }
+        }
+    },
+    watch:{
+        // testWatchObj(newVal,oldVal){
+        //     console.log('普通监听',newVal,oldVal);
+        // }
+        testWatchObj:{
+            handler(newVal,oldVal){
+                console.log('深度监听',newVal,oldVal);
+            },
+            deep: true
+        }
+    },
     created(){
         this.$axios.get('https://1967681584377147.cn-shanghai.fc.aliyuncs.com/2016-08-15/proxy/test_serverless/getInfoLIst/',
         {
@@ -46,6 +65,11 @@ export default {
         ctx.fillStyle = '#000'
         // 在画布上绘制 150x75 的矩形，从左上角开始 (0,0)
         ctx.fillRect(0,0,100,100);
+    },
+    methods:{
+        change(){
+            this.testWatchObj.name = 'zs'
+        }
     }
 }
 </script>
