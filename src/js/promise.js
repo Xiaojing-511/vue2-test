@@ -52,8 +52,7 @@ class PRomise {
         try {
             fn(resolve,reject)
         }catch(e){
-            console.log('err',e);
-             // 遇到错误时，捕获错误，执行 reject 函数
+            // 遇到错误时，捕获错误，执行 reject 函数
             reject(e)
         }
     }

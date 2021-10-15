@@ -43,6 +43,9 @@ class Parent1 {
         return this.name
     }
 }
+Parent1.prototype.test = function(){
+    return this.age + 'test'
+}
 
 // 利用extends与super实现子类继承
 class Child1 extends Parent1{
@@ -54,4 +57,4 @@ class Child1 extends Parent1{
 
 // const parent1 = new Parent1('张三',18);
 const children1 = new Child1('里斯',10,'黑龙江');
-console.log('obj1',children1,children1.getName());
+console.log('obj1',children1);

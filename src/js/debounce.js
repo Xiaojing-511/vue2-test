@@ -17,6 +17,7 @@ function debounce(fn,wait){
         }
         timer = setTimeout(() => {
             fn.apply(this,arguments);
+            console.log(this);
         }, wait);
     }
 }

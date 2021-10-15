@@ -23,5 +23,6 @@
 <script>
 export default {
     // components: { ...Button }
+    
 }
 </script>
